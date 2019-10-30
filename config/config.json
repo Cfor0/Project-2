@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "exampledb",
+    "database": "truckin_db",
     "host": "localhost",
     "dialect": "mysql"
   },
