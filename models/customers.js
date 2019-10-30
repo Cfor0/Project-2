@@ -16,5 +16,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATEONLY
     }
   });
+
+  Customers.associate = function(models) {
+    Customers.hasMany(models.PastDeliveries, {
+      onDelete: "CASCADE"
+    });
+  };
   return Customers;
 };

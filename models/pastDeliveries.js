@@ -1,11 +1,26 @@
 module.exports = function(sequelize, DataTypes) {
   var PastDeliveries = sequelize.define("pastDeliveries", {
-    days: {
-    //all of the past delivery days?
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
-    timeStamp: {
-      type: DataTypes.DATE
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    isDelivered: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: 1
     }
   });
+
+  PastDeliveries.associate = function(models) {
+    PastDeliveries.belongsTo(models.Customers, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return PastDeliveries;
 };
