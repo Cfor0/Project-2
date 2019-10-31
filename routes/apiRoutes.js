@@ -10,15 +10,17 @@ module.exports = function(app) {
   console.log(db.Customer);
   // console.log(Customer);
   // Create a new example
-  app.get("/api/test", function(req, res) {
+  app.post("/api/customer", function(req, res) {
     db.Customer.create(
       {
         name: "Carlo",
-        address: "4126 O'Connell Street"
+        address: "4126 O'Connell Street",
+        deliveryTime: 0600
       },
       {
         name: "Joe",
-        address: "1009 Trillium place"
+        address: "1009 Trillium place",
+        deliveryTime: 0500
       }
     ).then(function(dbCustomer) {
       res.json(dbCustomer);
@@ -26,11 +28,11 @@ module.exports = function(app) {
   });
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
+  app.delete("/api/customers/:id", function(req, res) {
+    db.Customer.destroy({ where: { id: req.params.id } }).then(function(
+      dbCustomer
     ) {
-      res.json(dbExample);
+      res.json(dbCustomer);
     });
   });
 };
