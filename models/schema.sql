@@ -1,5 +1,6 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS truckindb;
+CREATE DATABASE truckindb;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+USE truckindb;
+
+

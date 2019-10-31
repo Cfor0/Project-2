@@ -2,16 +2,26 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/api/customers", function(req, res) {
+    db.Customer.findAll({}).then(function(dbCustomer) {
+      res.json(dbCustomer);
     });
   });
-
+  console.log(db.Customer);
+  // console.log(Customer);
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.get("/api/test", function(req, res) {
+    db.Customer.create(
+      {
+        name: "Carlo",
+        address: "4126 O'Connell Street"
+      },
+      {
+        name: "Joe",
+        address: "1009 Trillium place"
+      }
+    ).then(function(dbCustomer) {
+      res.json(dbCustomer);
     });
   });
 

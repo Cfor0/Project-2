@@ -1,16 +1,16 @@
 module.exports = function(sequelize, DataTypes) {
-  var SavedRoutes = sequelize.define("SavedRoutes", {
+  var SavedRoute = sequelize.define("SavedRoute", {
     name: {
       type: DataTypes.STRING,
       allowNull: false
     }
   });
-  SavedRoutes.associate = function(models) {
-    SavedRoutes.belongsTo(models.PastDeliveries, {
+  SavedRoute.associate = function(models) {
+    SavedRoute.belongsTo(models.PastDelivery, {
       foreignKey: {
         allowNull: false
       }
     });
   };
-  return SavedRoutes;
+  return SavedRoute;
 };
