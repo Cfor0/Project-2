@@ -1,11 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
-  var Customers = sequelize.define("Customers", {
+  var Customer = sequelize.define("Customer", {
     name: {
       type: DataTypes.STRING,
       allowNull: false
     },
     address: {
       type: DataTypes.STRING,
+      allowNull: false
+    },
+    deliveryTime: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     isDelivered: {
@@ -17,10 +21,10 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Customers.associate = function(models) {
-    Customers.hasMany(models.PastDeliveries, {
+  Customer.associate = function(models) {
+    Customer.hasMany(models.PastDelivery, {
       onDelete: "CASCADE"
     });
   };
-  return Customers;
+  return Customer;
 };
