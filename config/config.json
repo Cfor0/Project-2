@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Passw0rd",
+    "password": "root",
     "database": "truckindb",
     "host": "localhost",
     "port": 8889,
