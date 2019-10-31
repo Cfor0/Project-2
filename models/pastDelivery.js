@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var PastDeliveries = sequelize.define("pastDeliveries", {
+  var PastDelivery = sequelize.define("PastDelivery", {
     name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -14,13 +14,13 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  PastDeliveries.associate = function(models) {
-    PastDeliveries.belongsTo(models.Customers, {
+  PastDelivery.associate = function(models) {
+    PastDelivery.belongsTo(models.Customer, {
       foreignKey: {
         allowNull: false
       }
     });
   };
 
-  return PastDeliveries;
+  return PastDelivery;
 };
