@@ -1,3 +1,10 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-image: URL("https://bidwellpres.org/wp-content/uploads/2017/10/Road-Large.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 2000px 820px;
+}
+
 .list-group-item {
   line-height: 2.5;
 }

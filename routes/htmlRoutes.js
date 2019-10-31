@@ -11,6 +11,24 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/daily_route", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("driver", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/admin", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("admin", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(

@@ -4,6 +4,7 @@
     "password": "Passw0rd",
     "database": "truckindb",
     "host": "localhost",
+    "port": 8889,
     "dialect": "mysql"
   },
   "test": {
