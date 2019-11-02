@@ -2,7 +2,7 @@
     <div class="container">
         <div class="jumbotron text-center">
             <h1>Truckin'</h1>
-            <p>Distribution and Delivery Solutions</p>pi
+            <p>Distribution and Delivery Solutions</p>
         </div>
         <div class="row">
             <div class="card-deck">
@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Drive safe out there today</h5>
                         <p class="card-text">click the button below to see today's route.</p>
-                        <a href="#" class="btn btn-primary">See Today's Route</a>
+                        <a href="./admin" class="btn btn-primary" id="driver-btn">See Today's Route</a>
                     </div>
                 </div>
 
@@ -21,10 +21,18 @@
                         <h5 class="card-title">Keep your drivers organized and on time.</h5>
                         <p class="card-text">Enter your password (eventually) and click the button to add or edit
                             customers, build routes, and get updates from your drivers.</p>
-                        <a href="#" class="btn btn-primary">Admin</a>
+                        <a href="#" class="btn btn-primary" id="admin-btn">Admin</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $( document ).ready(){
+        $("#driver-btn").on("click", function(){
+
+        })
+    }
+</script>
