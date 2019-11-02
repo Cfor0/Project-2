@@ -23,7 +23,8 @@ $(document).ready(function () {
             data: newCustomer
         }).then(
             function(){
-                console.log(data);
+                // console.log(data.name);
+                location.reload();
             }
         )
         // function upsertCustomer (newCustomer) {

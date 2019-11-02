@@ -1,5 +1,5 @@
 <div id="adminHome">
-    <div class="container page">
+    <div class="container">
         {{!-- <div class="row navRow">
             <div class="col-12" id="navBar">
                 <nav class="uk-navbar-container" uk-navbar>
@@ -24,7 +24,7 @@
                 </nav>
             </div> --}}
         {{!-- </div> --}}
-        <div class="card text-center">
+        <div class="card text-center mb-2">
             <div class="card-header">
                 <h5>Create Delivery</h5>
             </div>
@@ -42,40 +42,33 @@
         </div>
        
 
+<div class="card text-center mb-2">
+            <div class="card-header">
+                <h5>Create Customer</h5>
+            </div>
+            <form class="createForm">
+                <div class="createForm">
+                    <label for="placeNameInput">Company/place</label>
+                    <input class="form-control" id="placeNameInput" placeholder="name/place">
+
+                    <label for="addressInput">address</label>
+                    <input class="form-control" id="addressInput" placeholder="address">
+
+                    <label for="deliveryTime">Delivery Time</label>
+                    <input class="form-control" id="deliveryTime" placeholder="0800">
+
+                    <label for="deliveryTime">Delivery Day</label>
+                    <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
+
+                </div>
+                <button type="submit" class="btn btn-primary customerButton">Create Customer</button>
+            </form>
+        </div>
 
 
-                    </div>
-                    <div class="row">
-                        <div class="col-5">
-                            <form>
-                                <h2>Create Customer</h2>
-                                <div class="form-group">
-                                    <label for="placeNameInput">Company/place</label>
-                                    <input class="form-control" id="placeNameInput" placeholder="name/place">
-                                </div>
-                                <div class="form-group">
-                                    <label for="addressInput">address</label>
-                                    <input class="form-control" id="addressInput" placeholder="address">
+    </div>
 
-                                </div>
-                                <div class="form-group">
-                                    <label for="deliveryTime">Delivery Time</label>
-                                    <input class="form-control" id="deliveryTime" placeholder="0800">
-
-                                </div>
-                                <div class="form-group">
-                                    <label for="deliveryTime">Delivery Day</label>
-                                    <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
-
-                                </div>
-                                <button type="submit" class="btn btn-primary customerButton">Create Customer</button>
-                            </form>
-                        </div>
-                    </div>
-                    <a href="/" class="btn btn-primary" id="admin-btn">Home</a>
-
-                    <div class="row">
-                        <div class="col-8">
+            
 
                             {{!-- <ul Drivers and Theri Routes>
                     <li class="uk-open">
