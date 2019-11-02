@@ -1,8 +1,18 @@
+html, body {
+  /* To make use of full height of page*/
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   background-image: URL("https://bidwellpres.org/wp-content/uploads/2017/10/Road-Large.jpg");
+  background-position: center center;
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: 2000px 820px;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .list-group-item {

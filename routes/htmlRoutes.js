@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
 
   app.get("/daily_route", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Customer.findAll({}).then(function(dbExamples) {
       res.render("driver", {
         msg: "Welcome!",
         examples: dbExamples
@@ -21,6 +21,15 @@ module.exports = function(app) {
   });
 
   app.get("/admin", function(req, res) {
+    db.Customer.findAll({}).then(function(dbExamples) {
+      res.render("admin", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
+  app.get("/about", function(req, res) {
     db.Customer.findAll({}).then(function(dbExamples) {
       res.render("admin", {
         msg: "Welcome!",
