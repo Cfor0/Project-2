@@ -17,19 +17,19 @@ module.exports = function(app) {
   console.log(db.Customer);
   // console.log(Customer);
   // Create a new example
-  app.post("/api/customer", function(req, res) {
-    db.Customer.create({
-      name: "Carlo",
-      address: "4126 O'Connell Street",
-      deliveryTime: 1159,
-      day: "11/12/2019"
-    }).then(function(dbCustomer) {
-      res.json(dbCustomer);
-    });
-  });
+  // app.post("/api/customer", function(req, res) {
+  //   db.Customer.create({
+  //     name: "Carlo",
+  //     address: "4126 O'Connell Street",
+  //     deliveryTime: 1159,
+  //     day: "11/12/2019"
+  //   }).then(function(dbCustomer) {
+  //     res.json(dbCustomer);
+  //   });
+  // });
 
   app.post("/api/customer", function(req, res) {
-    db.Author.create(req.body).then(function(dbCustomer) {
+    db.Customer.create(req.body).then(function(dbCustomer) {
       res.json(dbCustomer);
     });
   });
