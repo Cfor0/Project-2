@@ -3,7 +3,14 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/customers", function(req, res) {
-    db.Customer.findAll({}).then(function(dbCustomer) {
+    db.Customer.findAll({
+      //show PastDelivery model
+      include: [
+        {
+          model: db.PastDelivery
+        }
+      ]
+    }).then(function(dbCustomer) {
       res.json(dbCustomer);
     });
   });
