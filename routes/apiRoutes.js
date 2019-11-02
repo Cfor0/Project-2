@@ -34,6 +34,12 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/customer", function(req, res) {
+    db.Author.create(req.body).then(function(dbCustomer) {
+      res.json(dbCustomer);
+    });
+  });
+
   // Delete an example by id
   app.delete("/api/customers/:id", function(req, res) {
     db.Customer.destroy({ where: { id: req.params.id } }).then(function(
