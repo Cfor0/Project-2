@@ -42,25 +42,26 @@
         </div>
         <div class="row">
             <div class="col-5">
-                <form>
+                <form class="createForm">
                     <h2>Create Customer</h2>
                     <div class="form-group">
                         <label for="placeNameInput">Company/place</label>
-                        <input class="form-control" id="exampleFormControlInput1 placeNameInput" placeholder="name/place">
+                        <input class="form-control" id="placeNameInput"
+                            placeholder="name/place">
                     </div>
                     <div class="form-group">
                         <label for="addressInput">address</label>
-                        <input class="form-control" id="exampleFormControlInput1 addressInput" placeholder="address">
+                        <input class="form-control" id="addressInput" placeholder="address">
 
                     </div>
                     <div class="form-group">
                         <label for="deliveryTime">Delivery Time</label>
-                        <input class="form-control" id="exampleFormControlInput1 deliveryTime" placeholder="0800">
+                        <input class="form-control" id="deliveryTime" placeholder="0800">
 
                     </div>
-                     <div class="form-group">
+                    <div class="form-group">
                         <label for="deliveryTime">Delivery Day</label>
-                        <input class="form-control" id="exampleFormControlInput1 deliveryDay" placeholder="MM/DD/YYYY">
+                        <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
 
                     </div>
                     <button type="submit" class="btn btn-primary customerButton">Create Customer</button>
@@ -97,6 +98,16 @@
                                 pariatur. Excepteur sint occaecat cupidatat proident.</p>
                         </div>
                     </li>
+                </ul>
+            </div>
+            <div>
+                <ul id="customer-list" class="list-group">
+                    {{#each examples}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <a href="example/{{this.id}}">{{this.text}}</a>
+                        <button class="btn btn-danger float-right delete">ｘ</button>
+                    </li>
+                    {{/each}}
                 </ul>
             </div>
 
