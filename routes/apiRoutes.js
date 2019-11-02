@@ -1,4 +1,5 @@
 var db = require("../models");
+var moment = require("moment");
 
 module.exports = function(app) {
   // Get all examples
@@ -18,18 +19,11 @@ module.exports = function(app) {
   // console.log(Customer);
   // Create a new example
   app.post("/api/customer", function(req, res) {
-    db.Customer.create(
-      {
-        name: "Carlo",
-        address: "4126 O'Connell Street",
-        deliveryTime: 0600
-      },
-      {
-        name: "Joe",
-        address: "1009 Trillium place",
-        deliveryTime: 0500
-      }
-    ).then(function(dbCustomer) {
+    db.Customer.create({
+      name: "Carlo",
+      address: "4126 O'Connell Street",
+      deliveryTime: moment(1230).format("HH")
+    }).then(function(dbCustomer) {
       res.json(dbCustomer);
     });
   });
