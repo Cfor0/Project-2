@@ -10,7 +10,12 @@ module.exports = function(sequelize, DataTypes) {
     },
     deliveryTime: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        isInt: true,
+        min: 1,
+        max: 2359
+      }
     },
     isDelivered: {
       type: DataTypes.BOOLEAN,

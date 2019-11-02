@@ -18,18 +18,12 @@ module.exports = function(app) {
   // console.log(Customer);
   // Create a new example
   app.post("/api/customer", function(req, res) {
-    db.Customer.create(
-      {
-        name: "Carlo",
-        address: "4126 O'Connell Street",
-        deliveryTime: 0600
-      },
-      {
-        name: "Joe",
-        address: "1009 Trillium place",
-        deliveryTime: 0500
-      }
-    ).then(function(dbCustomer) {
+    db.Customer.create({
+      name: "Carlo",
+      address: "4126 O'Connell Street",
+      deliveryTime: 1159,
+      day: "11/12/2019"
+    }).then(function(dbCustomer) {
       res.json(dbCustomer);
     });
   });
