@@ -59,11 +59,11 @@ const refreshCustomers = function () {
 const customerFormSubmit = function(event){
     event.preventDefault();
 
-    const customer = {
+    let customer = {
         name: $placeNameInput.val().trim(),
         address: $addressInput.val().trim(),
-        deliveryTime: $deliveryDay.val().trim(),
-        day: $deliveryTime.val().trim()
+        deliveryTime: $deliveryTime.val().trim(),
+        day: $deliveryDay.val().trim()
     };
     if (!(customer.name && customer.address && customer.deliveryTime && day)) {
         alert("You must enter have a delivery name, address, delivery time, and a day");
