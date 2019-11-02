@@ -3,7 +3,14 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/customers", function(req, res) {
-    db.Customer.findAll({}).then(function(dbCustomer) {
+    db.Customer.findAll({
+      //show PastDelivery model
+      include: [
+        {
+          model: db.PastDelivery
+        }
+      ]
+    }).then(function(dbCustomer) {
       res.json(dbCustomer);
     });
   });
@@ -23,6 +30,12 @@ module.exports = function(app) {
         deliveryTime: 0500
       }
     ).then(function(dbCustomer) {
+      res.json(dbCustomer);
+    });
+  });
+
+  app.post("/api/customer", function(req, res) {
+    db.Author.create(req.body).then(function(dbCustomer) {
       res.json(dbCustomer);
     });
   });
