@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var PastDelivery = sequelize.define("PastDelivery", {
+  var PastDelivery = sequelize.define("P astDelivery", {
     name: {
       type: DataTypes.STRING,
       allowNull: false

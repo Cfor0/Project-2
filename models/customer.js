@@ -23,6 +23,7 @@ module.exports = function(sequelize, DataTypes) {
 
   Customer.associate = function(models) {
     Customer.hasMany(models.PastDelivery, {
+      foreignKey: "owner",
       onDelete: "CASCADE"
     });
   };

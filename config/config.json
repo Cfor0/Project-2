@@ -10,7 +10,7 @@
   "test": {
     "username": "root",
     "password": null,
-    "database": "testdb",
+    "database": "truckindb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
