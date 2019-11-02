@@ -1,6 +1,6 @@
 <div id="adminHome">
     <div class="container page">
-        <div class="row navRow">
+        {{!-- <div class="row navRow">
             <div class="col-12" id="navBar">
                 <nav class="uk-navbar-container" uk-navbar>
                     <div class="uk-navbar-left">
@@ -22,17 +22,17 @@
 
                     </div>
                 </nav>
+            </div> --}}
+        {{!-- </div> --}}
+        <div class="card text-center">
+            <div class="card-header">
+                <h5>Create Delivery</h5>
             </div>
-        </div>
-        <div class="col-7">
-            <h2>Create Delivery</h2>
             <form class="clearfix mb-4" action="POST">
-                <div class="form-group">
+                <div class="form-group m-2">
                     <label for="example-text">Destination</label>
                     <input type="text" id="destination" class="form-control" aria-describedby="example-text"
                         placeholder="destination">
-                </div>
-                <div class="form-group">
                     <label for="example-description">address</label>
                     <textarea class="form-control" id="address" aria-describedby="example-description"
                         placeholder="address"></textarea>
@@ -40,40 +40,44 @@
                 <button id="submit" class="btn sendOrder float-right">Send Route</button>
             </form>
         </div>
-        <div class="row">
-            <div class="col-5">
-                <form class="createForm">
-                    <h2>Create Customer</h2>
-                    <div class="form-group">
-                        <label for="placeNameInput">Company/place</label>
-                        <input class="form-control" id="placeNameInput"
-                            placeholder="name/place">
-                    </div>
-                    <div class="form-group">
-                        <label for="addressInput">address</label>
-                        <input class="form-control" id="addressInput" placeholder="address">
+       
+
+
 
                     </div>
-                    <div class="form-group">
-                        <label for="deliveryTime">Delivery Time</label>
-                        <input class="form-control" id="deliveryTime" placeholder="0800">
+                    <div class="row">
+                        <div class="col-5">
+                            <form>
+                                <h2>Create Customer</h2>
+                                <div class="form-group">
+                                    <label for="placeNameInput">Company/place</label>
+                                    <input class="form-control" id="placeNameInput" placeholder="name/place">
+                                </div>
+                                <div class="form-group">
+                                    <label for="addressInput">address</label>
+                                    <input class="form-control" id="addressInput" placeholder="address">
 
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryTime">Delivery Time</label>
+                                    <input class="form-control" id="deliveryTime" placeholder="0800">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryTime">Delivery Day</label>
+                                    <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
+
+                                </div>
+                                <button type="submit" class="btn btn-primary customerButton">Create Customer</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="deliveryTime">Delivery Day</label>
-                        <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
+                    <a href="/" class="btn btn-primary" id="admin-btn">Home</a>
 
-                    </div>
-                    <button type="submit" class="btn btn-primary customerButton">Create Customer</button>
-                </form>
-            </div>
-        </div>
-        <a href="/" class="btn btn-primary" id="admin-btn">Home</a>
+                    <div class="row">
+                        <div class="col-8">
 
-        <div class="row">
-            <div class="col-8">
-
-                <ul Drivers and Theri Routes>
+                            {{!-- <ul Drivers and Theri Routes>
                     <li class="uk-open">
                         <a class="uk-accordion-title" href="#">Tim</a>
                         <div class="uk-accordion-content" id="timeRoute">
@@ -98,27 +102,17 @@
                                 pariatur. Excepteur sint occaecat cupidatat proident.</p>
                         </div>
                     </li>
-                </ul>
-            </div>
-            <div>
-                <ul id="customer-list" class="list-group">
-                    {{#each examples}}
-                    <li data-id="{{this.id}}" class="list-group-item">
-                        <a href="example/{{this.id}}">{{this.text}}</a>
-                        <button class="btn btn-danger float-right delete">ｘ</button>
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
+                </ul> --}}
+                        </div>
 
+                    </div>
+
+
+
+
+
+            </div>
         </div>
 
-
-
-
-
-    </div>
-</div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/admin.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/js/admin.js"></script>

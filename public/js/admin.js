@@ -18,20 +18,20 @@ $(document).ready(function () {
             deliveryTime: deliveryTime.val().trim(),
             day: deliveryDay.val().trim()
         }
-        // $.ajax("/api/customer", {
-        //     type: "POST",
-        //     data: newCustomer
-        // }).then(
-        //     function(){
-        //         console.log(data);
-        //     }
-        // )
-        function upsertCustomer (newCustomer) {
-            $.post("/api/customer", newCustomer)
-            .then(
-                console.log(newCustomer)
-            )
-        }
-        upsertCustomer();   
+        $.ajax("/api/customer", {
+            type: "POST",
+            data: newCustomer
+        }).then(
+            function(){
+                console.log(data);
+            }
+        )
+        // function upsertCustomer (newCustomer) {
+        //     $.post("/api/customer", newCustomer)
+        //     .then(
+        //         console.log(newCustomer)
+        //     )
+        // }
+        // upsertCustomer();   
     })
 });
