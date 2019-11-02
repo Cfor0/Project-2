@@ -21,7 +21,7 @@ module.exports = function(app) {
     db.Customer.create({
       name: "Carlo",
       address: "4126 O'Connell Street",
-      deliveryTime: 1159,
+      deliveryTime: 1200,
       day: "11/12/2019"
     }).then(function(dbCustomer) {
       res.json(dbCustomer);
