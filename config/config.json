@@ -4,13 +4,13 @@
     "password": "root",
     "database": "truckindb",
     "host": "localhost",
-    "port": 8889,
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "testdb",
+    "database": "truckindb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
