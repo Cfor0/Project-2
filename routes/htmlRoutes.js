@@ -31,7 +31,7 @@ module.exports = function(app) {
 
   app.get("/about", function(req, res) {
     db.Customer.findAll({}).then(function(dbExamples) {
-      res.render("admin", {
+      res.render("about", {
         msg: "Welcome!",
         examples: dbExamples
       });
