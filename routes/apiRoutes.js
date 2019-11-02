@@ -2,14 +2,14 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/customers", function(req, res) {
+  app.get("/api/customer", function(req, res) {
     db.Customer.findAll({
       //show PastDelivery model
-      include: [
-        {
-          model: db.PastDelivery
-        }
-      ]
+      // include: [
+      //   {
+      //     model: db.PastDelivery
+      //   }
+      // ]
     }).then(function(dbCustomer) {
       res.json(dbCustomer);
     });
@@ -17,19 +17,20 @@ module.exports = function(app) {
   console.log(db.Customer);
   // console.log(Customer);
   // Create a new example
-  app.post("/api/customer", function(req, res) {
-    db.Customer.create({
-      name: "Carlo",
-      address: "4126 O'Connell Street",
-      deliveryTime: 1200,
-      day: "11/12/2019"
-    }).then(function(dbCustomer) {
-      res.json(dbCustomer);
-    });
-  });
+  // app.post("/api/customer", function(req, res) {
+  //   db.Customer.create({
+  //     name: "Carlo",
+  //     address: "4126 O'Connell Street",
+  //     deliveryTime: 1159,
+  //     day: "11/12/2019"
+  //   }).then(function(dbCustomer) {
+  //     res.json(dbCustomer);
+  //   });
+  // });
 
   app.post("/api/customer", function(req, res) {
-    db.Author.create(req.body).then(function(dbCustomer) {
+    console.log(req.body);
+    db.Customer.create(req.body).then(function(dbCustomer) {
       res.json(dbCustomer);
     });
   });
