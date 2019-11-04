@@ -35,7 +35,6 @@ module.exports = function(app) {
     });
   });
 
-
   app.put("/api/customer/:id", function(req, res) {
     console.log("request body: ", req.body);
     db.Customer.update(

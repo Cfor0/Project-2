@@ -33,24 +33,16 @@
                 <div class="card text-center">
                     <h5 class="card-header">Create Delivery</h5>
                     <div class="card-body">
-                        {{!-- <ul id="customer-list" class="list-group"> --}}
-                        {{!-- {{#each customers}}
-
-                    <li data-id="{{this.id}}" class="list-group-item">
-                        <a href="customer/{{this.name}}">{{this.id}}</a>
-                        <button class="btn btn-danger float-right delete">ｘ</button>
-                    </li>
-
-                    {{/each}} --}}
-                        {{!-- </ul> --}}
-                        <form action="POST">
+                        <ul id="customer-list" class="list-group">
+                        </ul>
+                        <form class="deliveryForm"action="PUT">
                             <div class="form-group m-2">
-                                <label for="example-text">Customer Name</label>
-                                <input type="text" id="destination" class="form-control" aria-describedby="example-text"
-                                    placeholder="destination">
+                                <label for="example-text">Customer Id</label>
+                                <input type="text" id="customerId" class="form-control" aria-describedby="example-text"
+                                    placeholder="Id#">
                                 <label for="example-description">Driver</label>
-                                <textarea class="form-control" id="address" aria-describedby="example-description"
-                                    placeholder="address"></textarea>
+                                <input class="form-control" id="deliveryDriver" aria-describedby="example-description"
+                                    placeholder="tim, rachel, shawn, carlo"></input>
                                 <button type="submit" id="submit" class="btn btn-primary m-1 float-right">Send
                                     Route</button>
                             </div>
@@ -62,7 +54,7 @@
                 <div class="card text-center">
                     <h5 class="card-header">Create Customer</h5>
                     <div class="card-body">
-                        <form>
+                        <form class="createForm">
                             <label for="placeNameInput">Company/place</label>
                             <input class="form-control" id="placeNameInput" placeholder="name/place">
 
