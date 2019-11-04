@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
         max: 2359
       }
     },
-    isDelivered: {
+    deliveryB: {
       type: DataTypes.BOOLEAN,
       defaultValue: 0
     },
