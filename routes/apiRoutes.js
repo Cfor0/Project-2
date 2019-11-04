@@ -35,6 +35,19 @@ module.exports = function(app) {
     });
   });
 
+  app.update("/api/customer/:id", function(req, res) {
+    // console.log(req.body);
+    db.Customer.update({
+      driver: req.body.driver,
+      deliveryB: 1,
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbCustomer) {
+      res.json(dbCustomer);
+    });
+  });
+
   // Delete an example by id
   app.delete("/api/customers/:id", function(req, res) {
     db.Customer.destroy({ where: { id: req.params.id } }).then(function(
