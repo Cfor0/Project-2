@@ -24,63 +24,63 @@
                 </nav>
             </div> --}}
         {{!-- </div> --}}
-        <div class="card text-center mb-2">
-            <div class="card-header">
-                <h5>Create Delivery</h5>
-            </div>
-            <div class="card-body">
-                <ul id="customer-list" class="list-group">
-                    {{!-- {{#each customers}}
+        <div class="jumbotron text-center">
+            <h1>Truckin'</h1>
+            <p>Distribution and Delivery Solutions</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <h5 class="card-header">Create Delivery</h5>
+                    <div class="card-body">
+                        {{!-- <ul id="customer-list" class="list-group"> --}}
+                        {{!-- {{#each customers}}
                     <li data-id="{{this.id}}" class="list-group-item">
                         <a href="customer/{{this.name}}">{{this.id}}</a>
                         <button class="btn btn-danger float-right delete">ｘ</button>
                     </li>
                     {{/each}} --}}
-                </ul>
-            </div>
-            <form class="clearfix mb-4 deliveryForm" action="PUT">
-                <div class="form-group m-2">
-                    <label for="example-text">Customer Id</label>
-                    <input type="text" id="customerId" class="form-control" aria-describedby="example-text"
-                        placeholder="destination">
-                    <label for="example-description">Driver</label>
-                    <input class="form-control" id="deliveryDriver" aria-describedby="example-description"
-                        placeholder="carlo, tim, shawn, rachel"></input>
+                        {{!-- </ul> --}}
+                        <form action="POST">
+                            <div class="form-group m-2">
+                                <label for="example-text">Customer Name</label>
+                                <input type="text" id="destination" class="form-control" aria-describedby="example-text"
+                                    placeholder="destination">
+                                <label for="example-description">Driver</label>
+                                <textarea class="form-control" id="address" aria-describedby="example-description"
+                                    placeholder="address"></textarea>
+                                <button type="submit" id="submit" class="btn btn-primary m-1 float-right">Send
+                                    Route</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <button id="submit" class="btn sendOrder float-right">Send Delivery</button>
-            </form>
-        </div>
-
-
-        <div class="card text-center mb-2">
-            <div class="card-header">
-                <h5>Create Customer</h5>
             </div>
-            <form class="createForm">
-                <div class="createForm">
-                    <label for="placeNameInput">Company/place</label>
-                    <input class="form-control" id="placeNameInput" placeholder="name/place">
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <h5 class="card-header">Create Customer</h5>
+                    <div class="card-body">
+                        <form>
+                            <label for="placeNameInput">Company/place</label>
+                            <input class="form-control" id="placeNameInput" placeholder="name/place">
 
-                    <label for="addressInput">address</label>
-                    <input class="form-control" id="addressInput" placeholder="address">
+                            <label for="addressInput">address</label>
+                            <input class="form-control" id="addressInput" placeholder="address">
 
-                    <label for="deliveryTime">Delivery Time</label>
-                    <input class="form-control" id="deliveryTime" placeholder="0800">
+                            <label for="deliveryTime">Delivery Time</label>
+                            <input class="form-control" id="deliveryTime" placeholder="0800">
 
-                    <label for="deliveryTime">Delivery Day</label>
-                    <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
+                            <label for="deliveryTime">Delivery Day</label>
+                            <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
 
+                            <button type="submit" class="btn btn-primary m-1 float-right">Create Customer</button>
+                        </form>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary customerButton">Create Customer</button>
-            </form>
+            </div>
         </div>
-
-
     </div>
-
-
-
-    {{!-- <ul Drivers and Theri Routes>
+{{!-- <ul Drivers and Theri Routes>
                     <li class="uk-open">
                         <a class="uk-accordion-title" href="#">Tim</a>
                         <div class="uk-accordion-content" id="timeRoute">
@@ -106,15 +106,6 @@
                         </div>
                     </li>
                 </ul> --}}
-</div>
-
-</div>
-
-
-
-
-
-</div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
