@@ -39,12 +39,12 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
+  app.get("/customer/:id", function(req, res) {
+    db.Customer.findOne({ where: { id: req.params.id } }).then(function(
+      dbCustomer
     ) {
       res.render("example", {
-        example: dbExample
+        customers: dbCustomer
       });
     });
   });

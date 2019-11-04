@@ -4,8 +4,29 @@ $(document).ready(function() {
   let deliveryTime = $("#deliveryTime");
   let deliveryDay = $("#deliveryDay");
   const customerList = $("#customer-list");
+
+  let customerId = $("#customerId");
+  let deliveryDriver = $("#deliveryDriver");
+
   //   let customerButton = $(".customerButton");
   //   var customerList = $("#customer-list");
+  $(".deliveryForm").on("submit", function(event) {
+    event.preventDefault();
+
+    var id = customerId.val().trim();
+    console.log("id", id);
+    var name = deliveryDriver.val().trim();
+    var driver = {
+      driver: name
+    };
+    console.log("driver: ", driver);
+    $.ajax("/api/customer/" + id, {
+      type: "PUT",
+      data: driver
+    }).then(function() {
+      location.reload();
+    });
+  });
 
   $(".createForm").on("submit", function(event) {
     event.preventDefault();
