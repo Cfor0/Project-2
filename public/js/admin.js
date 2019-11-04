@@ -80,8 +80,9 @@ $(document).ready(function() {
     API.getCustomers().then(function(data) {
       var customers = data.map(function(customer) {
         if (customer.deliveryB === false) {
+          let id = customer.id;
           var $a = $("<a>")
-            .text(customer.name)
+            .text("    Id#  " + id + " , " + customer.name)
             .attr("href", "/customer/" + customer.id);
 
           var $li = $("<li>")
