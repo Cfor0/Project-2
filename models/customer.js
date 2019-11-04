@@ -23,6 +23,10 @@ module.exports = function(sequelize, DataTypes) {
     },
     day: {
       type: DataTypes.DATEONLY
+    },
+    driver: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
 

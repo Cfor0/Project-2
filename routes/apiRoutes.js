@@ -35,6 +35,13 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/delivery", function(req, res) {
+    console.log(req.body);
+    db.PastDelivery.create(req.body).then(function(dbDelivery) {
+      res.json(dbDelivery);
+    });
+  });
+
   // Delete an example by id
   app.delete("/api/customers/:id", function(req, res) {
     db.Customer.destroy({ where: { id: req.params.id } }).then(function(
