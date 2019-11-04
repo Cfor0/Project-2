@@ -17,12 +17,16 @@ module.exports = function(sequelize, DataTypes) {
         max: 2359
       }
     },
-    isDelivered: {
+    deliveryB: {
       type: DataTypes.BOOLEAN,
       defaultValue: 0
     },
     day: {
       type: DataTypes.DATEONLY
+    },
+    driver: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   });
 
