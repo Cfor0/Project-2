@@ -29,15 +29,15 @@
                 <h5>Create Delivery</h5>
             </div>
             <div class="card-body">
-    <ul id="customer-list" class="list-group">
-      {{#each examples}}
-      <li data-id="{{this.id}}" class="list-group-item">
-        <a href="customer/{{this.id}}">{{this.text}}</a>
-        <button class="btn btn-danger float-right delete">ｘ</button>
-      </li>
-      {{/each}}
-    </ul>
-  </div>
+                <ul id="customer-list" class="list-group">
+                    {{#each examples}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <a href="customer/{{this.id}}">{{this.text}}</a>
+                        <button class="btn btn-danger float-right delete">ｘ</button>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
             <form class="clearfix mb-4" action="POST">
                 <div class="form-group m-2">
                     <label for="example-text">Destination</label>
