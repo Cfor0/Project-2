@@ -35,10 +35,16 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/delivery", function(req, res) {
-    console.log(req.body);
-    db.PastDelivery.create(req.body).then(function(dbDelivery) {
-      res.json(dbDelivery);
+  app.update("/api/customer/:id", function(req, res) {
+    // console.log(req.body);
+    db.Customer.update({
+      driver: req.body.driver,
+      deliveryB: 1,
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbCustomer) {
+      res.json(dbCustomer);
     });
   });
 
