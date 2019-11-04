@@ -30,12 +30,12 @@
             </div>
             <div class="card-body">
                 <ul id="customer-list" class="list-group">
-                    {{!-- {{#each customers}}
+                    {{#each customers}}
                     <li data-id="{{this.id}}" class="list-group-item">
                         <a href="customer/{{this.name}}">{{this.id}}</a>
                         <button class="btn btn-danger float-right delete">ｘ</button>
                     </li>
-                    {{/each}} --}}
+                    {{/each}} --
                 </ul>
             </div>
             <form class="clearfix mb-4" action="POST">
@@ -55,7 +55,7 @@
         <div class="card text-center mb-2">
             <div class="card-header">
                 <h5>Create Customer</h5>
-            </div>
+         
             <form class="createForm">
                 <div class="createForm">
                     <label for="placeNameInput">Company/place</label>
@@ -74,45 +74,41 @@
                 <button type="submit" class="btn btn-primary customerButton">Create Customer</button>
             </form>
         </div>
-
+   </div>
 
     </div>
 
 
 
-    {{!-- <ul Drivers and Theri Routes>
-                    <li class="uk-open">
-                        <a class="uk-accordion-title" href="#">Tim</a>
-                        <div class="uk-accordion-content" id="timeRoute">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="uk-accordion-title" href="#">Rachel</a>
-                        <div class="uk-accordion-content" id="rachelRoute">
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo
-                                consequat. Duis aute irure dolor reprehenderit.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="uk-accordion-title" href="#">Carlo</a>
-                        <div class="uk-accordion-content" id="carloRoute">
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla
-                                pariatur. Excepteur sint occaecat cupidatat proident.</p>
-                        </div>
-                    </li>
-                </ul> --}}
+    <ul Drivers and Their Routes>
+        <li class="uk-open">
+            <a class="uk-accordion-title" href="#">Tim</a>
+            <div class="uk-accordion-content" id="timeRoute">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut
+                    labore et dolore magna aliqua.</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">Rachel</a>
+            <div class="uk-accordion-content" id="rachelRoute">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo
+                    consequat. Duis aute irure dolor reprehenderit.</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">Carlo</a>
+            <div class="uk-accordion-content" id="carloRoute">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla
+                    pariatur. Excepteur sint occaecat cupidatat proident.</p>
+            </div>
+        </li>
+    </ul>
 </div>
 
 </div>
-
-
-
-
 
 </div>
 </div>

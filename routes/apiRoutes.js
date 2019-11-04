@@ -35,7 +35,7 @@ module.exports = function(app) {
     });
   });
 
-  app.update("/api/customer/:id", function(req, res) {
+  app.get("/api/customer/:id", function(req, res) {
     // console.log(req.body);
     db.Customer.update({
       driver: req.body.driver,
