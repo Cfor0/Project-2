@@ -38,16 +38,16 @@
                     {{/each}} --}}
                 </ul>
             </div>
-            <form class="clearfix mb-4" action="POST">
+            <form class="clearfix mb-4 deliveryForm" action="PUT">
                 <div class="form-group m-2">
-                    <label for="example-text">Customer Name</label>
-                    <input type="text" id="destination" class="form-control" aria-describedby="example-text"
+                    <label for="example-text">Customer Id</label>
+                    <input type="text" id="customerId" class="form-control" aria-describedby="example-text"
                         placeholder="destination">
                     <label for="example-description">Driver</label>
-                    <textarea class="form-control" id="address" aria-describedby="example-description"
-                        placeholder="address"></textarea>
+                    <input class="form-control" id="deliveryDriver" aria-describedby="example-description"
+                        placeholder="carlo, tim, shawn, rachel"></input>
                 </div>
-                <button id="submit" class="btn sendOrder float-right">Send Route</button>
+                <button id="submit" class="btn sendOrder float-right">Send Delivery</button>
             </form>
         </div>
 
