@@ -13,12 +13,18 @@ $(document).ready(function() {
   $(".deliveryForm").on("submit", function(event) {
     event.preventDefault();
 
-    var id = customerId;
-    var driver = deliveryDriver.val().trim();
-
+    var id = customerId.val().trim();
+    console.log("id", id);
+    var name = deliveryDriver.val().trim();
+    var driver = {
+      driver: name
+    };
+    console.log("driver: ", driver);
     $.ajax("/api/customer/" + id, {
       type: "PUT",
       data: driver
+    }).then(function() {
+      location.reload();
     });
   });
 
