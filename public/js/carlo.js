@@ -26,7 +26,8 @@ $(document).ready(function() {
   };
   $(document).on("click", ".delivered", function() {
     event.preventDefault();
-    $.ajax("/api/driver", {
+    var id = customer.id;
+    $.ajax("/api/driver/" + id, {
       type: "PUT"
     }).then(function() {
       location.reload();
