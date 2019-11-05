@@ -24,19 +24,10 @@ $(document).ready(function() {
       });
     }
   };
-  $(document).on("click", ".delivered", function() {
-    event.preventDefault();
-    $.ajax("/api/driver", {
-      type: "PUT"
-    }).then(function() {
-      location.reload();
-    });
-    console.log("thx cuong");
-  });
   var refreshCustomers = function() {
     API.getCustomers().then(function(data) {
       var customers = data.map(function(customer) {
-        if (customer.deliveryB === true && customer.driver === "carlo") {
+        if (customer.deliveryB === true && customer.driver === "shawn") {
           var $a = $("<a>")
             .text("    Name:  " + customer.name + " , " + customer.address)
             .attr("href", "/customer/" + customer.id);
@@ -49,14 +40,14 @@ $(document).ready(function() {
             .append($a);
 
           var $button = $("<button>")
-            .addClass("btn btn-danger delivered float-right delete")
-            .text("o");
+            .addClass("btn btn-danger float-right delete")
+            .text("ｘ");
 
           $li.append($button);
 
           return $li;
         } else {
-          console.log("Works");
+          console.log("poop");
         }
       });
 
