@@ -36,10 +36,11 @@ $(document).ready(function() {
   var refreshCustomers = function() {
     API.getCustomers().then(function(data) {
       var customers = data.map(function(customer) {
-        if (customer.deliveryB === true && customer.driver === "shawn") {
+        if (customer.deliveryB === true && customer.driver === "rachel") {
           var $a = $("<a>")
             .text("    Name:  " + customer.name + " , " + customer.address)
             .attr("href", "/customer/" + customer.id);
+
           var $li = $("<li>")
             .attr({
               class: "list-group-item",
