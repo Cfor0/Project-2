@@ -14,25 +14,25 @@ module.exports = function(app) {
   app.get("/rachel", function(req, res) {
     db.Customer.findAll({}).then(function(dbExamples) {
       console.log(dbExamples);
-      res.render("driver", {});
+      res.render("rachel", {});
     });
   });
   app.get("/tim", function(req, res) {
     db.Customer.findAll({}).then(function(dbExamples) {
       console.log(dbExamples);
-      res.render("driver", {});
+      res.render("tim", {});
     });
   });
   app.get("/carlo", function(req, res) {
     db.Customer.findAll({}).then(function(dbExamples) {
       console.log(dbExamples);
-      res.render("driver", {});
+      res.render("carlo", {});
     });
   });
   app.get("/shawn", function(req, res) {
     db.Customer.findAll({}).then(function(dbExamples) {
       console.log(dbExamples);
-      res.render("driver", {});
+      res.render("shawn", {});
     });
   });
 
