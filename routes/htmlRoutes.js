@@ -11,12 +11,28 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/daily_route", function(req, res) {
+  app.get("/rachel", function(req, res) {
     db.Customer.findAll({}).then(function(dbExamples) {
-      res.render("driver", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
+      console.log(dbExamples);
+      res.render("rachel", {});
+    });
+  });
+  app.get("/tim", function(req, res) {
+    db.Customer.findAll({}).then(function(dbExamples) {
+      console.log(dbExamples);
+      res.render("tim", {});
+    });
+  });
+  app.get("/carlo", function(req, res) {
+    db.Customer.findAll({}).then(function(dbExamples) {
+      console.log(dbExamples);
+      res.render("carlo", {});
+    });
+  });
+  app.get("/shawn", function(req, res) {
+    db.Customer.findAll({}).then(function(dbExamples) {
+      console.log(dbExamples);
+      res.render("shawn", {});
     });
   });
 
