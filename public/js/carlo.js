@@ -1,11 +1,36 @@
 $(document).ready(function() {
+  const customerList = $("#customer-list");
+  var API = {
+    saveExample: function(example) {
+      return $.ajax({
+        headers: {
+          "Content-Type": "application/json"
+        },
+        type: "POST",
+        url: "api/examples",
+        data: JSON.stringify(example)
+      });
+    },
+    getCustomers: function() {
+      return $.ajax({
+        url: "api/customer",
+        type: "GET"
+      });
+    },
+    deleteExample: function(id) {
+      return $.ajax({
+        url: "api/examples/" + id,
+        type: "DELETE"
+      });
+    }
+  };
   var refreshCustomers = function() {
     API.getCustomers().then(function(data) {
       var customers = data.map(function(customer) {
         if (customer.deliveryB === true && customer.driver === "carlo") {
           let id = customer.id;
           var $a = $("<a>")
-            .text("    Id#  " + id + " , " + customer.name)
+            .text("    Name:  " + customer.name + " , " + customer.address)
             .attr("href", "/customer/" + customer.id);
 
           var $li = $("<li>")
