@@ -40,10 +40,10 @@ body {
   line-height: 2.5;
 }
 
-.material-icons {
+.large.material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 40px;
+  font-size: 50px;
   /* Preferred icon size */
 }
