@@ -1,29 +1,5 @@
 <div id="adminHome">
     <div class="container">
-        {{!-- <div class="row navRow">
-            <div class="col-12" id="navBar">
-                <nav class="uk-navbar-container" uk-navbar>
-                    <div class="uk-navbar-left">
-
-                        <ul class="uk-navbar-nav">
-                            <li class="uk-active"><a href="#">Active</a></li>
-                            <li>
-                                <a href="#">Parent</a>
-                                <div class="uk-navbar-dropdown">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li class="uk-active"><a href="#">Active</a></li>
-                                        <li><a href="#">Item</a></li>
-                                        <li><a href="#">Item</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#">Item</a></li>
-                        </ul>
-
-                    </div>
-                </nav>
-            </div> --}}
-        {{!-- </div> --}}
         <div class="jumbotron text-center">
             <h1>Truckin'</h1>
             <p>Distribution and Delivery Solutions</p>
@@ -33,9 +9,8 @@
                 <div class="card text-center">
                     <h5 class="card-header">Create Delivery</h5>
                     <div class="card-body">
-                        <ul id="customer-list" class="list-group">
-                        </ul>
-                        <form class="deliveryForm"action="PUT">
+
+                        <form class="deliveryForm" action="PUT">
                             <div class="form-group m-2">
                                 <label for="example-text">Customer Id</label>
                                 <input type="text" id="customerId" class="form-control" aria-describedby="example-text"
@@ -52,31 +27,46 @@
             </div>
             <div class="col-sm-6">
                 <div class="card text-center">
-                    <h5 class="card-header">Create Customer</h5>
-                    <div class="card-body">
-                        <form class="createForm">
-                            <label for="placeNameInput">Company/place</label>
-                            <input class="form-control" id="placeNameInput" placeholder="name/place">
+                    <h5 class="card-header">Customers</h5>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">Create New Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">Customer List</a>
+                        </li>
 
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <ul id="customer-list" class="list-group">
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <form class="createForm m-2">
+                                <label for="placeNameInput">Company/place</label>
+                                <input class="form-control" id="placeNameInput" placeholder="name/place">
 
-                            <label for="addressInput">address</label>
-                            <input class="form-control" id="addressInput" placeholder="address">
+                                <label for="addressInput">address</label>
+                                <input class="form-control" id="addressInput" placeholder="address">
 
-                            <label for="deliveryTime">Delivery Time</label>
-                            <input class="form-control" id="deliveryTime" placeholder="0800">
+                                <label for="deliveryTime">Delivery Time</label>
+                                <input class="form-control" id="deliveryTime" placeholder="0800">
 
-                            <label for="deliveryTime">Delivery Day</label>
-                            <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
+                                <label for="deliveryTime">Delivery Day</label>
+                                <input class="form-control" id="deliveryDay" placeholder="MM/DD/YYYY">
 
-                            <button type="submit" class="btn btn-primary m-1 float-right">Create Customer</button>
-                        </form>
+                                <button type="submit" class="btn btn-primary m-1 float-right">Create Customer</a>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-{{!-- <ul Drivers and Theri Routes>
+    {{!-- <ul Drivers and Theri Routes>
                     <li class="uk-open">
                         <a class="uk-accordion-title" href="#">Tim</a>
                         <div class="uk-accordion-content" id="timeRoute">
