@@ -26,7 +26,9 @@ $(document).ready(function() {
   };
   $(document).on("click", ".delivered", function() {
     event.preventDefault();
-    var id = customer.id;
+    console.log("test", $(this).data("id"));
+
+    var id = $(this).data("id");
     $.ajax("/api/driver/" + id, {
       type: "PUT"
     }).then(function() {
@@ -51,7 +53,8 @@ $(document).ready(function() {
 
           var $button = $("<button>")
             .addClass("btn btn-danger delivered float-right delete")
-            .text("o");
+            .text("o")
+            .attr("data-id", customer.id);
 
           $li.append($button);
 
