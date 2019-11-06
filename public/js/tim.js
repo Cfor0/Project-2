@@ -50,7 +50,7 @@ $(document).ready(function() {
             .append($a);
 
           var $button = $("<button>")
-            .addClass("btn btn-danger delivered float-right delete")
+            .addClass("uk-button uk-default delivered float-right delete")
             .text("o")
             .attr("data-id", customer.id);
 
