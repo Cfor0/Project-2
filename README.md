@@ -1,4 +1,4 @@
-# Project-2 Truckin'
+# Truckin'
 
 This app is designed to have an administrator create new customers and assign them to a certain driver for delivery of their product. The driver can then, check off the customer and return him to the exisiting customer list. 
 
@@ -8,12 +8,19 @@ This app is designed to have an administrator create new customers and assign th
 
 * The Admin is responsible for adding routes and assign them to drivers. Then, the driver must click the button when the delivery is completed. 
 
-Truckin'
-Collaborators:
--Tim Cockerill
--Carlo Ortega
--Rachel Doran
--Shawn Galloway
+## Built With
+* Sequelize
+* MySQL
+* Handlebars
+* HTML5, CSS, Javascript
+
+## Deployment
+*Deployed on Heroku*
 
 
+## Collaborators
+* Tim Cockerill
+* Carlo Ortega
+* Rachel Doran
+* Shawn Galloway
 
