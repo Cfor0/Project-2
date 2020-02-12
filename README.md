@@ -8,6 +8,8 @@ This app is designed to have an administrator create new customers and assign th
 
 * The Admin is responsible for adding routes and assign them to drivers. Then, the driver must click the button when the delivery is completed. 
 
+![gif](Truckin.gif)
+
 ## Built With
 * Sequelize
 * MySQL
